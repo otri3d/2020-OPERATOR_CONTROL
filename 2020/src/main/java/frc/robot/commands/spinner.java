@@ -40,7 +40,7 @@ public class spinner extends CommandBase {
   // Returns true when the command should end.
   @Override
   public boolean isFinished() {
-    if (Robot.m_robotContainer.getRawButtonReleased(6)){
+    if (Robot.m_robotContainer.driver.getRawButtonReleased(6)){
         return true;
     }else{
         return false;

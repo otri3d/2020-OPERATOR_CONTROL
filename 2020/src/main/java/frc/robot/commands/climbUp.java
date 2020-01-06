@@ -36,7 +36,7 @@ public class climbUp extends CommandBase {
   // Make this return true when this Command no longer needs to run execute()
   @Override
   public boolean isFinished() {
-    if (Robot.m_robotContainer.getRawButtonReleased(3)){
+    if (Robot.m_robotContainer.driver.getRawButtonReleased(3)){
       return true;
     }
     else{
