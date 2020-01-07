@@ -14,7 +14,7 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 /**
  * An example command that uses an example subsystem.
  */
-public class ArcadeDrive extends CommandBase {
+public class TankDrive extends CommandBase {
 
   private static final double DELTA_LIMIT = 0.75;
   private static final double RAMP_UP_CONSTANT = 0.05;
@@ -27,7 +27,7 @@ public class ArcadeDrive extends CommandBase {
   double inputR = 0;
   double inputL = 0;
 
-  public ArcadeDrive() {
+  public TankDrive() {
     // Use addRequirements() here to declare subsystem dependencies
     addRequirements(Robot.dt);
   }
