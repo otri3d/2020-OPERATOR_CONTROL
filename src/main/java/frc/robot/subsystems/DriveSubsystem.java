@@ -13,7 +13,7 @@ import edu.wpi.first.wpilibj.SerialPort;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.CounterBase.EncodingType;
 import frc.robot.Constants;
-import frc.robot.commands.TankDrive;
+import frc.robot.commands.ArcadeDrive;
 import frc.robot.PIDController;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
