@@ -22,24 +22,24 @@ public class RobotContainer {
 
   public Joystick driver = new Joystick(0);
   
-  private Button spinner = new JoystickButton(driver, 3); //x
-  private Button extendClimber = new JoystickButton(driver, 2); //b
-  private Button un_extendClimber = new JoystickButton(driver, 7); //Some arbritary button for now
-  private Button extendClimb = new JoystickButton(driver, 8); //b
-  private Button un_extendClimb = new JoystickButton(driver, 9); //Some arbritary button for now
-  private Button intake = new JoystickButton(driver, 5); //Left Bumper
-  private Button outtake = new JoystickButton(driver, 6); //Right Bumper
-  private Button shooter = new JoystickButton(driver, 4); //y 
+  // private Button spinner = new JoystickButton(driver, 3); //x
+  private Button extendClimber = new JoystickButton(driver, 3); //triangle
+  // private Button un_extendClimber = new JoystickButton(driver, 7); //Some arbritary button for now
+  private Button extendClimb = new JoystickButton(driver, 2); //circle, toggle
+  // private Button un_extendClimb = new JoystickButton(driver, 9); //Some arbritary button for now
+  private Button intake = new JoystickButton(driver, 6); //Left Bumper
+  private Button outtake = new JoystickButton(driver, 7); //Right Bumper
+  // private Button shooter = new JoystickButton(driver, 4); //y 
 
   public RobotContainer(){
-    this.spinner.whileHeld(new frc.robot.commands.spinner());
+    // this.spinner.whileHeld(new frc.robot.commands.spinner());
     this.extendClimber.whileHeld(new frc.robot.commands.climberUp());
-    this.un_extendClimber.whileHeld(new frc.robot.commands.climberDown());
+    // this.un_extendClimber.whileHeld(new frc.robot.commands.climberDown());
     this.extendClimb.whileHeld(new frc.robot.commands.climbUp());
-    this.un_extendClimb.whileHeld(new frc.robot.commands.climbDown());
+    // this.un_extendClimb.whileHeld(new frc.robot.commands.climbDown());
     this.intake.whileHeld(new frc.robot.commands.Intake());
     this.outtake.whileHeld(new frc.robot.commands.outtake());
-    this.shooter.whileHeld(new frc.robot.commands.shooter());
+    // this.shooter.whileHeld(new frc.robot.commands.shooter());
   }
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.
@@ -56,7 +56,7 @@ public class RobotContainer {
   }
 
   public double rightY() {
-    double rightdrivestick = driver.getRawAxis(5);
+    double rightdrivestick = driver.getRawAxis(3);
     if (Math.abs(rightdrivestick) < 0.05)
       return 0.0;
     else
@@ -64,7 +64,7 @@ public class RobotContainer {
   }
 
   public double rightX() {
-    double joy = driver.getRawAxis(4);
+    double joy = driver.getRawAxis(2);
     if (Math.abs(joy) < 0.05)
       return 0;
     else
