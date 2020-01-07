@@ -9,6 +9,7 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.robot.subsystems.*;
@@ -28,7 +29,7 @@ public class Robot extends TimedRobot {
   public static ShooterSubsystem shooter = new ShooterSubsystem();
   
   private Command m_autonomousCommand;
-  // SendableChooser<Command> m_chooser = new SendableChooser<>(); // To be used with dashboard
+  SendableChooser<Command> m_chooser = new SendableChooser<>(); // To be used with dashboard
 
   public static RobotContainer m_robotContainer; //m_oi; RobotContainer is the same as OI
 
@@ -42,7 +43,7 @@ public class Robot extends TimedRobot {
     // autonomous chooser on the dashboard.
     m_robotContainer = new RobotContainer();
 
-  // SmartDashboard.putData("Auto mode", m_chooser);  
+    SmartDashboard.putData("Auto mode", m_chooser);  
   }
 
   /**
@@ -77,7 +78,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void autonomousInit() {
-    // m_autonomousCommand = m_chooser.getSelected(); //Select on Dash
+    m_autonomousCommand = m_chooser.getSelected(); //Select on Dash
 
     // schedule the autonomous command (example)
     if (m_autonomousCommand != null) {

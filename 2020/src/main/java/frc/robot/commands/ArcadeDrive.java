@@ -40,7 +40,7 @@ public class ArcadeDrive extends CommandBase {
   @Override
   public void execute() {
     inputL = Robot.m_robotContainer.leftY() * -1;
-    inputR = Robot.m_robotContainer.rightY();
+    inputR = Robot.m_robotContainer.rightX();
     deltaL = inputL - prevInputL;
     deltaR = inputR - prevInputR;
 
