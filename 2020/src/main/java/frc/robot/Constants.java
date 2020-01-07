@@ -17,6 +17,12 @@ package frc.robot;
  */
 public final class Constants {
 
+    public static final class DriveConstants {
+        public static final int leftDriver = 1;
+        public static final int leftSlave = 6;
+        public static final int rightDriver = 2;
+        public static final int rightSlave = 5;
+      }
 //       // Drivetrain Motors
 //   public static int leftfront = 1;
 //   public static int leftback = 2;
